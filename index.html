@@ -215,11 +215,10 @@
 
         <!-- Jadwal Piket Section - DIPERBAIKI: ditambahkan class section -->
         <section id="piket" class="section">
-          <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;"></h2>
-
-          <h1 style="text-align: center;">jadwal piket</h1>
-          <div class="berita" id="Piket"></div>
-      </section>
+          <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">🧹 Jadwal Piket Kelas IX B</h2>
+          <div id="piket-container"></div> <!-- container untuk tabel -->
+        </section>
+        
 
         <!-- Jadwal Pelajaran Section - DIPERBAIKI: ditambahkan class section -->
         <section id="pelajaran" class="section">
@@ -293,7 +292,6 @@
     <footer class="footer">
         <p>&copy; 2025 Kelas IX B - SMP Negeri. Dibuat oleh MFA.</p>
     </footer>
-    https://script.google.com/macros/s/AKfycbwIFFcmhcV8ACPtSxvpJxCidxiKnOsgSvxtciW30Tl57K-we6OolpxzhP6qOzVf0_Pycg/exec
     <script>
         function showSection(sectionName) {
             // Hide all sections
@@ -376,23 +374,80 @@
 
 
 
-          fetch("https://script.google.com/macros/s/AKfycbwIFFcmhcV8ACPtSxvpJxCidxiKnOsgSvxtciW30Tl57K-we6OolpxzhP6qOzVf0_Pycg/exec")
-          .then(res => res.json())
-          .then(data => {
-            const container = document.getElementById("piket");
-            data.forEach(item => {
-              const card = document.createElement("div");
-              card.className = "news-item";
-              card.innerHTML = `
-                <div class="news-item">
-                  <h3>${item.nama}</h3>
-                  <p>${item.hari}</p>
-                </div>
-              `;
-              container.appendChild(card);
-            });
-          })
-          .catch(err => console.error("Gagal ambil data:", err));
-    </script>
+          fetch("https://script.google.com/macros/s/AKfycbxIlObB9e2YgLaylNOV8xLotg23JWrXhJHZOSC6vUUm_l8MHKvkoem_LRGTLIzbfyMRsg/exec")
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("piket-container");
+
+    // Kelompokkan berdasarkan hari
+    const piketByDay = {
+      Senin: [],
+      Selasa: [],
+      Rabu: [],
+      Kamis: [],
+      Jumat: []
+    };
+
+    data.forEach(item => {
+      const hari = item.hari.toLowerCase();
+      if (hari.includes("senin")) piketByDay.Senin.push(item.nama);
+      else if (hari.includes("selasa")) piketByDay.Selasa.push(item.nama);
+      else if (hari.includes("rabu")) piketByDay.Rabu.push(item.nama);
+      else if (hari.includes("kamis")) piketByDay.Kamis.push(item.nama);
+      else if (hari.includes("jumat")) piketByDay.Jumat.push(item.nama);
+    });
+
+    // Tentukan jumlah baris berdasarkan hari dengan data terbanyak
+    const maxRows = Math.max(
+      piketByDay.Senin.length,
+      piketByDay.Selasa.length,
+      piketByDay.Rabu.length,
+      piketByDay.Kamis.length,
+      piketByDay.Jumat.length
+    );
+
+    // Buat tabel
+    const table = document.createElement("table");
+    table.border = "1";
+    table.style.margin = "0 auto";
+    table.style.textAlign = "center";
+
+    // Buat header
+    const thead = document.createElement("thead");
+    thead.innerHTML = `
+      <tr>
+        <th>Senin</th>
+        <th>Selasa</th>
+        <th>Rabu</th>
+        <th>Kamis</th>
+        <th>Jumat</th>
+      </tr>
+    `;
+    table.appendChild(thead);
+
+    // Buat body
+    const tbody = document.createElement("tbody");
+
+    for (let i = 0; i < maxRows; i++) {
+      const row = document.createElement("tr");
+
+      const hariArray = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'];
+      hariArray.forEach(hari => {
+        const cell = document.createElement("td");
+        cell.textContent = piketByDay[hari][i] || ""; // Jika tidak ada, kosong
+        row.appendChild(cell);
+      });
+
+      tbody.appendChild(row);
+    }
+
+    table.appendChild(tbody);
+    container.appendChild(table);
+  })
+  .catch(err => {
+    console.error("Gagal ambil data piket:", err);
+    document.getElementById("piket-container").innerHTML = "<p>Gagal memuat jadwal piket.</p>";
+  });
+ </script>
 </body>
 </html>

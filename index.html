@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas IX B - SMP Negeri</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Tambahan CSS untuk menyembunyikan section yang tidak aktif */
+        .section {
+            display: none;
+        }
+        
+        .section.active {
+            display: block;
+        }
+    </style>
+   </head>
+<body>
+    <div class="ocean-waves"></div>
+    <div class="floating-bubbles" id="bubbles"></div>
+
+    <nav style="padding: 13px; text-align: center;" >
+            <div class="logo">🌊 Kelas IX B</div>
+            
+    </nav>
+
+    <section class="hero">
+        <div class="roman-numeral">IX B</div>
+        <h1>Kelas IX B</h1>
+        <p class="subtitle">SMP Negeri - Generasi Unggul Berkarakter</p>
+    </section>
+
+   
+
+    <div class="navbar">
+      <ul>
+        <li class="nav-item active" onclick="showSection('home')">Beranda</li>
+        <li class="nav-item" onclick="showSection('students')">Siswa</li>
+        <li class="nav-item" onclick="showSection('activities')">Kegiatan</li>
+        <li class="nav-item" onclick="showSection('news')">Berita</li>
+        <li class="nav-item" onclick="showSection('structure')">Struktur</li>
+        <li class="nav-item" onclick="showSection('piket')">Jadwal piket</li>
+        <li class="nav-item" onclick="showSection('pelajaran')">Jadwal pelajaran</li>
+    </ul>
+    </div>
+
+    <div class="content">
+        <!-- Beranda Section -->
+        <section id="home" class="section active">
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>🎓 Visi Kelas</h3>
+                    <p>Menjadi kelas yang unggul dalam prestasi akademik dan non-akademik, berkarakter mulia, dan siap menghadapi tantangan masa depan dengan semangat kebersamaan.</p>
+                </div>
+                <div class="card">
+                    <h3>🚀 Misi Kelas</h3>
+                    <p>Menciptakan lingkungan belajar yang kondusif, mengembangkan potensi setiap siswa, dan membangun kekompakan tim yang solid dalam meraih prestasi.</p>
+                </div>
+                <div class="card">
+                    <h3>🏆 Prestasi</h3>
+                    <p>Juara I Lomba Kebersihan Kelas, Juara II Festival Sains, dan berbagai penghargaan lainnya yang membanggakan sekolah.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Siswa Section -->
+        <section id="students" class="section">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">👥 Daftar Siswa Kelas IX B</h2>
+            <div class="student-list">
+                <div class="student-card">
+                    <div class="student-number">I</div>
+                    <h4>M.fabian</h4>
+                    <p>Ketua Kelas</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-number">II</div>
+                    <h4>rafasya</h4>
+                    <p>Wakil Ketua</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-number">III</div>
+                    <h4>putri</h4>
+                    <p>Sekretaris</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-number">IV</div>
+                    <h4>Ridwan</h4>
+                    <p>Bendahara</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-number">V</div>
+                    <h4>Rizki Pratama</h4>
+                    <p>Anggota</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-number">VI</div>
+                    <h4>Maya Sari</h4>
+                    <p>Anggota</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-number">VII</div>
+                    <h4>Arif Rahman</h4>
+                    <p>Anggota</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-number">VIII</div>
+                    <h4>Nia Ramadhani</h4>
+                    <p>Anggota</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-number">IX</div>
+                    <h4>Doni Pratama</h4>
+                    <p>Anggota</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-number">X</div>
+                    <h4>Lila Wulandari</h4>
+                    <p>Anggota</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kegiatan Section -->
+        <section id="activities" class="section">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">📅 Kegiatan Kelas</h2>
+            <div class="activity-item">
+                <div class="activity-date">📚 Senin, 15 Januari 2025</div>
+                <h4>Diskusi Kelompok Matematika</h4>
+                <p>Pembahasan materi persamaan kuadrat dan latihan soal-soal UN bersama tim pengajar.</p>
+            </div>
+            <div class="activity-item">
+                <div class="activity-date">🎨 Rabu, 17 Januari 2025</div>
+                <h4>Workshop Kreativitas</h4>
+                <p>Membuat project seni dari bahan daur ulang untuk pameran sekolah bulan depan.</p>
+            </div>
+            <div class="activity-item">
+                <div class="activity-date">⚽ Jumat, 19 Januari 2025</div>
+                <h4>Pertandingan Futsal Antar Kelas</h4>
+                <p>Tim futsal kelas IX B akan bertanding melawan kelas IX A di lapangan sekolah.</p>
+            </div>
+            <div class="activity-item">
+                <div class="activity-date">🔬 Selasa, 23 Januari 2025</div>
+                <h4>Praktikum IPA</h4>
+                <p>Eksperimen tentang reaksi kimia sederhana di laboratorium sekolah.</p>
+            </div>
+            <div class="activity-item">
+                <div class="activity-date">🎭 Kamis, 25 Januari 2025</div>
+                <h4>Pentas Seni Kelas</h4>
+                <p>Persiapan untuk penampilan drama dalam acara pentas seni sekolah.</p>
+            </div>
+        </section>
+
+        <!-- Berita Section -->
+        <section id="news" class="section">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">📰 Berita Terkini</h2>
+
+            <h1 style="text-align: center;">Berita Terbaru</h1>
+            <div class="berita" id="news-dynamic"></div>
+        </section>
+
+        <!-- Struktur Section -->
+        <section id="structure" class="section">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">🏛️ Struktur Organisasi Kelas</h2>
+            <div class="structure-item">
+                <div class="position">👑 Ketua Kelas</div>
+                <div>
+                    <h4>M.f.alfaizi</h4>
+                    <p>Memimpin dan mengkoordinasi seluruh kegiatan kelas</p>
+                </div>
+            </div>
+            <div class="structure-item">
+                <div class="position">🤝 Wakil Ketua</div>
+                <div>
+                    <h4>rafasya</h4>
+                    <p>Membantu ketua kelas dan menggantikan saat berhalangan</p>
+                </div>
+            </div>
+            <div class="structure-item">
+                <div class="position">📝 Sekretaris</div>
+                <div>
+                    <h4>Putri</h4>
+                    <p>Mencatat dan mendokumentasikan seluruh kegiatan kelas</p>
+                </div>
+            </div>
+            <div class="structure-item">
+                <div class="position">💰 Bendahara</div>
+                <div>
+                    <h4>RIdwan</h4>
+                    <p>Mengelola keuangan dan administrasi kas kelas</p>
+                </div>
+            </div>
+            <div class="structure-item">
+                <div class="position">🧹 Sie. Kebersihan</div>
+                <div>
+                    <h4>ezra kalele</h4>
+                    <p>Mengatur jadwal piket dan menjaga kebersihan kelas</p>
+                </div>
+            </div>
+            <div class="structure-item">
+                <div class="position">📚 Sie. Akademik</div>
+                <div>
+                    <h4>Arif Rahman & Nia Ramadhani</h4>
+                    <p>Mengkoordinasi kegiatan belajar dan diskusi kelompok</p>
+                </div>
+            </div>
+            <div class="structure-item">
+                <div class="position">🎨 Sie. Kreativitas</div>
+                <div>
+                    <h4>Doni Pratama & Lila Wulandari</h4>
+                    <p>Mengelola kegiatan seni dan kreativitas kelas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jadwal Piket Section - DIPERBAIKI: ditambahkan class section -->
+        <section id="piket" class="section">
+          <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;"></h2>
+
+          <h1 style="text-align: center;">jadwal piket</h1>
+          <div class="berita" id="Piket"></div>
+      </section>
+
+        <!-- Jadwal Pelajaran Section - DIPERBAIKI: ditambahkan class section -->
+        <section id="pelajaran" class="section">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">📚 Jadwal Pelajaran Kelas IX B</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>jam</th>
+                        <th>senin</th>
+                        <th>Selasa</th>
+                        <th>rabu</th>
+                        <th>Kamis</th>
+                        <th>Jumat</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>06;30-07.15</td>
+                        <td>pembiasaan</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>07.15-08;30</td>
+                        <td>b.indonesia</td>
+                        <td>ips</td>
+                        <td>pjok</td>
+                        <td>ipa</td>
+                        <td>pkn</td>
+                    </tr>
+                    <tr>
+                        <td>08:30-09:50</td>
+                        <td>TIK</td>
+                        <td>inggris</td>
+                        <td>inggris</td>
+                        <td>b.sunda</td>
+                        <td>ipa</td>
+                    </tr>
+                    <tr>
+                        <td>09:50-10:20</td>
+                        <td>istirahat</td>
+                        <td>istirahat</td>
+                        <td>istirahat</td>
+                        <td>istirahat</td>
+                        <td>istirahat</td>
+                    </tr>
+                    <tr>
+                        <td>10:20-11.00</td>
+                        <td>pkn</td>
+                        <td>mtk</td>
+                        <td>mtk</td>
+                        <td>sbk</td>
+                        <td>pai</td>
+                    </tr>
+                    <tr>
+                        <td>11.00-12.20</td>
+                        <td>mtk</td>
+                        <td>ips,pai</td>
+                        <td>ips</td>
+                        <td>b.indonesia</td>
+                        <td>pai</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kelas IX B - SMP Negeri. Dibuat oleh MFA.</p>
+    </footer>
+    https://script.google.com/macros/s/AKfycbwIFFcmhcV8ACPtSxvpJxCidxiKnOsgSvxtciW30Tl57K-we6OolpxzhP6qOzVf0_Pycg/exec
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionName).classList.add('active');
+
+            // Update nav items
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Create floating bubbles
+        function createBubble() {
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+            
+            // Random size
+            const size = Math.random() * 60 + 20;
+            bubble.style.width = size + 'px';
+            bubble.style.height = size + 'px';
+            
+            // Random horizontal position
+            bubble.style.left = Math.random() * 100 + '%';
+            
+            // Random animation duration
+            bubble.style.animationDuration = (Math.random() * 6 + 4) + 's';
+            
+            document.getElementById('bubbles').appendChild(bubble);
+            
+            // Remove bubble after animation
+            setTimeout(() => {
+                bubble.remove();
+            }, 8000);
+        }
+
+        // Create bubbles periodically
+        setInterval(createBubble, 1000);
+
+        // Initial bubbles
+        for (let i = 0; i < 5; i++) {
+            setTimeout(createBubble, i * 200);
+        }
+
+        // Add wave animation effect
+        document.addEventListener('mousemove', (e) => {
+            const waves = document.querySelector('.ocean-waves');
+            const x = e.clientX / window.innerWidth;
+            waves.style.transform = `translateX(${x * 20}px)`;
+        });
+
+        // DIPERBAIKI: Script untuk berita dinamis dengan container yang benar
+        fetch("https://script.google.com/macros/s/AKfycby5AOTLvza7C8YJG01ihhyuHCJLxhzD6muRkRHhxek-_1LBdPiFliEquy2VVzcBCQYJtA/exec")
+          .then(res => res.json())
+          .then(data => {
+            const container = document.getElementById("news-dynamic");
+            data.forEach(item => {
+              const card = document.createElement("div");
+              card.className = "news-item";
+              card.innerHTML = `
+                <img src="${item.gambar}" alt="Berita">
+                <div class="news-item">
+                  <span class="news-date">🕒 Diposting pada: ${item.tanggal}</span>
+                  <h3>${item.judul}</h3>
+                  <p>${item.isi}</p>
+                </div>
+              `;
+              container.appendChild(card);
+            });
+          })
+          .catch(err => console.error("Gagal ambil data:", err));
+
+
+
+
+          fetch("https://script.google.com/macros/s/AKfycbwIFFcmhcV8ACPtSxvpJxCidxiKnOsgSvxtciW30Tl57K-we6OolpxzhP6qOzVf0_Pycg/exec")
+          .then(res => res.json())
+          .then(data => {
+            const container = document.getElementById("piket");
+            data.forEach(item => {
+              const card = document.createElement("div");
+              card.className = "news-item";
+              card.innerHTML = `
+                <div class="news-item">
+                  <h3>${item.nama}</h3>
+                  <p>${item.hari}</p>
+                </div>
+              `;
+              container.appendChild(card);
+            });
+          })
+          .catch(err => console.error("Gagal ambil data:", err));
+    </script>
+</body>
+</html>
